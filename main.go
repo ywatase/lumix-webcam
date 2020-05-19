@@ -37,7 +37,7 @@ func proxy(wg *sync.WaitGroup, stream *mjpeg.Stream) {
 	if err != nil {
 		log.Fatal(err)
 	}
-    conn, err := net.ListenUDP("udp4", udpAddr)
+	conn, err := net.ListenUDP("udp4", udpAddr)
 	if err != nil {
 		log.Fatal(err)
 	}
