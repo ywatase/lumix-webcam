@@ -1,5 +1,5 @@
 ---
-project_name: git-bump
+project_name: lumix-webcam
 env:
   - GO111MODULE=on
 before:
@@ -7,7 +7,7 @@ before:
     - go mod tidy
 builds:
   - main: .
-    binary: git-bump
+    binary: lumix-webcam
     ldflags:
       - -s -w
       - -X main.Version={{.Version}}
