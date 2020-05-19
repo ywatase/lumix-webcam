@@ -60,10 +60,6 @@ func proxy(wg *sync.WaitGroup, stream *mjpeg.Stream) {
 func main() {
 
 	flag.Parse()
-	if *camera == "" {
-		flag.Usage()
-		os.Exit(1)
-	}
 
 	stream := mjpeg.NewStreamWithInterval(*interval)
 
