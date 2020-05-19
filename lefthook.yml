@@ -1,0 +1,18 @@
+pre-commit:
+  parallel: true
+  commands:
+    go-fmt:
+      files: git ls-files -m
+      glob: "*.go"
+      run: go fmt {files}
+    go-mod-tidy:
+      files: git ls-files -m
+      glob: "go.*"
+      run: go mod tidy
+    govet:
+      files: git ls-files -m
+      glob: "*.go"
+      run: go vet {files}
+  scripts:
+    "main.go":
+      runner: go run
